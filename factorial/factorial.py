@@ -3,6 +3,7 @@ if input_n < 0:
     print("Factorial is not defined for negative numbers")
     exit(1)
 def factorial(n: int) -> int:
+    print(n)
     if n == 0:
         return 1
     else:
