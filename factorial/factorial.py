@@ -1,4 +1,4 @@
-input_n = int(input("Enter a number: "))
+input_n = int(input("Enter a positive integer: "))
 if input_n < 0:
     print("Factorial is not defined for negative numbers")
     exit(1)
