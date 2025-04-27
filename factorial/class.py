@@ -15,7 +15,16 @@ class Factorial:
             for i in range(2, self.n + 1):
                 result *= i
             return result
+    
+    def isPirmeNumber(self):
+        if self.n < 2:
+            return False
+        for i in range(2, self.n, 1):
+            if self.n % i == 0:
+                return False
+        return True
 
 factorial = Factorial()
 factorial.input()
 print(f"factorial of {factorial.n} is", factorial.calculate())
+print(f"{factorial.n} is prime number?: {factorial.isPirmeNumber()}")
