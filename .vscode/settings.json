@@ -4,5 +4,8 @@
     "plaintext": false,
     "markdown": false,
     "scminput": false
-  }
+  },
+  "editor.tabSize": "4",
+  "editor.insertSpaces": "true",
+  "editor.detectIndentation": "false"
 }
