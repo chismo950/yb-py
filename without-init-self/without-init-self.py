@@ -1,6 +1,6 @@
 class Factorial:
     @staticmethod
-    def factorial(n):  # Factorial method now works with self.num1
+    def factorial(n):  # Factorial method now works with n
         result = 1  # Initialized before the loop to store the product.
         for i in range(1, n + 1):
             result *= i
@@ -9,8 +9,8 @@ class Factorial:
     def check_Prime(n):  # Prime check method added
         if n < 2:  # 0 and 1 are not prime numbers
             return False
-        for i in range(2, int(n ** 0.5) + 1): # Check up to the square root of num1 and int to make it not show decimal values
-            # Check if num1 is divisible by i 
+        for i in range(2, int(n ** 0.5) + 1): # Check up to the square root of n and int to make it not show decimal values
+            # Check if n is divisible by i 
             if n % i == 0:
                 return False
         return True
@@ -28,6 +28,6 @@ number1 = Factorial()
 # Call the display method to show the result
 number1.display(10)
 
-Factorial.display(5) # plus: this also working for staticmethod
+Factorial.display(5) # plus: this is also working for staticmethod
 
-# about static method: https://docs.python.org/3/library/functions.html#staticmethod
+# about the static method: https://docs.python.org/3/library/functions.html#staticmethod
