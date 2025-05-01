@@ -22,4 +22,4 @@ while True:
         print("👋 byebye")
         exit()
     else:
-        print("⚠️ in valid action")
+        print("⚠️ invalid action")
