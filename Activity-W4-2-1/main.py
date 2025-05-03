@@ -16,4 +16,5 @@ pd.set_option('display.max_rows', None)
 parquetPath = baseDir + "/Sample_data_2.parquet"
 df = pd.read_parquet(parquetPath)
 num_features = len(df.columns)
+# print(df.head()) # print all columns
 print(num_features)
