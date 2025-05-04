@@ -47,6 +47,7 @@ def main():
     processor.initial_processing()
     processor.sin()
     processor.cos()
+    processor.diameterOfCircle()
 
 if __name__ == "__main__":
     main()
