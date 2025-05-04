@@ -1,4 +1,6 @@
 import tensorflow as tf
+import os
+baseDir = os.path.dirname(os.path.abspath(__file__))
 
 class ImgProcessor:
     def __init__(self, filePath):
@@ -17,7 +19,7 @@ class ImgProcessor:
         print(f"Image Data Type: {image.dtype}")
 
 def main():
-    imgPath = "example.jpg"
+    imgPath = baseDir + "/example.jpg"
     imgProcessor = ImgProcessor(imgPath)
     imgProcessor.loadImageData()
     imgProcessor.initial_processing()
