@@ -2,6 +2,8 @@ from ucimlrepo import fetch_ucirepo
 
 def main():
     # fetch Iris dataset from UCI ML Repository
+    # ID 53 = Iris dataset
+    # Other datasets have different IDs (e.g., Wine = 109)
     iris = fetch_ucirepo(id=53) 
 
     # get the target labels
