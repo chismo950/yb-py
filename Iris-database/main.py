@@ -1,4 +1,4 @@
-from iris_utils import get_iris_flower_names
+from utils.iris_utils import get_iris_flower_names
 
 if __name__ == "__main__":
     print("name of flowers in the Iris dataset:")
