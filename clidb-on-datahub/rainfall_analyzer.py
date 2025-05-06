@@ -11,7 +11,7 @@ class RainfallAnalyzer:
         return self.df.head(5)
     
     def data_info(self):
-        # print the info of data frame, include colunm names, nun-empty data amount, data type, etc
+        # print the info of data frame, include colunm names, none-empty data amount, data type, etc
         return self.df.info()
 
     def rainfall_statistics(self):
