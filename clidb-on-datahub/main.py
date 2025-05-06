@@ -4,6 +4,7 @@ from rainfall_analyzer import RainfallAnalyzer
 
 def main():
     BASE_DIR = os.path.dirname(__file__)
+    # the csv is downloaded from https://data.niwa.co.nz
     csv_path = os.path.join(BASE_DIR, '12430_rain.csv')
     rainfall_analyzer = RainfallAnalyzer(csv_path)
 
