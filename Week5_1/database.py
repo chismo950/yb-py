@@ -16,3 +16,18 @@ def create_table():
     ''')
     conn.commit()
     conn.close()
+
+course_table_name = 'courses'
+
+def create_table_course():
+    conn = create_connection()
+    cursor = conn.cursor()
+    cursor.execute(f'''
+        CREATE TABLE IF NOT EXISTS {course_table_name} (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL UNIQUE,
+            unit INTEGER NOT NULL
+        )
+    ''')
+    conn.commit()
+    conn.close()
