@@ -51,6 +51,6 @@ def search_user_advanced(user_id: int, name: str):
     conn = create_connection()
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM users WHERE name LIKE ? and id = ?", ('%' + name + '%', user_id))
-    rows = cursor.fetchone()
+    row = cursor.fetchone()
     conn.close()
-    return rows
+    return row
