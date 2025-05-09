@@ -15,7 +15,7 @@ def main():
     create_table()
     while True:
         menu()
-        choice = input("Select an option (1-5): ")
+        choice = input("Select an option (1-7): ")
         if choice == '1':
             name = input("Enter name: ")
             email = input("Enter email: ")
