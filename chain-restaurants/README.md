@@ -50,4 +50,4 @@ Ethan is an international student who wants to book a table at “TasteChain” 
 ## Diagrams
 
 ![Use Case Diagram](use-case-diagram.png)  
-![Class Diagram](class-diagram.png)
+![Class Diagram](class-diagram-2.png)
