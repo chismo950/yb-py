@@ -54,3 +54,6 @@ def search_user_advanced(user_id: int, name: str):
     row = cursor.fetchone()
     conn.close()
     return row
+
+def connect_to_course(user_id: int, *course_ids):
+    print(user_id, course_ids)
