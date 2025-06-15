@@ -1,7 +1,8 @@
 import sys
+from typing import List, Literal
 
 
-def print_board(board):
+def print_board(board: List[str]) -> None:
     """Prints the current state of the board."""
     print()
     # Display the board in a 3x3 grid format with separators
@@ -13,8 +14,12 @@ def print_board(board):
     print()
 
 
-def check_win(board, player):
+def check_win(board: List[str], player: Literal['X', 'O']) -> bool:
     """Checks if the given player has won."""
+    # Validate player parameter
+    if player not in ('X', 'O'):
+        raise ValueError("Player must be 'X' or 'O'")
+
     # Define all possible winning combinations (rows, columns, diagonals)
     wins = [
         (0, 1, 2), (3, 4, 5), (6, 7, 8),  # rows
@@ -22,16 +27,17 @@ def check_win(board, player):
         (0, 4, 8), (2, 4, 6)              # diagonals
     ]
     # Check if any winning combination has all three positions occupied by the same player
+    # (board[a] == board[b]) and (board[b] == board[c]) and (board[c] == player)
     return any(board[a] == board[b] == board[c] == player for a, b, c in wins)
 
 
-def check_draw(board):
+def check_draw(board: List[str]) -> bool:
     """Checks if the board is full without a winner."""
     # Return True if all spaces are filled (no empty spaces remain)
     return all(space != ' ' for space in board)
 
 
-def get_move(board, player):
+def get_move(board: List[str], player: str) -> int:
     """Prompts the player to enter a move and validates it."""
     while True:
         try:
@@ -51,11 +57,11 @@ def get_move(board, player):
             print("Invalid input. Please enter a number between 1 and 9.")
 
 
-def main():
+def main() -> None:
     # Initialize empty board with 9 spaces
     board = [' '] * 9
     # Start with player X
-    current_player = 'X'
+    current_player:Literal['X', 'O'] = 'X'
 
     # Display welcome message and board layout guide
     print("Welcome to Tic-Tac-Toe!")
